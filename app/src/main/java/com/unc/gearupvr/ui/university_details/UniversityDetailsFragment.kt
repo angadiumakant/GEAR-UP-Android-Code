@@ -26,7 +26,6 @@ import com.unc.gearupvr.utils.ExternalLinks
 import com.unc.gearupvr.utils.FilterConstants
 import com.unc.gearupvr.utils.UNWebViewClient
 import com.unc.gearupvr.utils.WebPageType
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.alert
 
@@ -61,7 +60,7 @@ class UniversityDetailsFragment : Fragment() {
                     it,
                     WebPageType.CustomPage
                 )
-            }
+            }!!
 
         //Show/Hide activity indicator based on viewModel busy status
         viewModel.isBusy.observe(this, Observer {
@@ -117,13 +116,15 @@ class UniversityDetailsFragment : Fragment() {
 
                 binding.parentLayout.visibility = View.VISIBLE
                 val baseURL = "https://" + BuildConfig.API_BASE
-                webView.loadDataWithBaseURL(
-                    baseURL,
-                    it.lightModeContent,
-                    "text/html; charset=utf-8",
-                    "UTF-8",
-                    ""
-                )
+                it.lightModeContent?.let { it1 ->
+                    webView.loadDataWithBaseURL(
+                        baseURL,
+                        it1,
+                        "text/html; charset=utf-8",
+                        "UTF-8",
+                        ""
+                    )
+                }
 
                 if (!it.tagsList.isNullOrEmpty()) {
                     for (element in it.tagsList) {

@@ -51,16 +51,16 @@ class GearupApp : Application() {
 
         //adding listener to block the orientation change
         registerActivityLifecycleCallbacks(ActivityLifecycleAdapter())
-
-        (ctx?.getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE))?.let { sharedPref ->
-            deviceId = sharedPref.getString("deviceId", null)
-            if (deviceId == null) {
-                deviceId = UUID.randomUUID().toString()
-                val editor = sharedPref.edit()
-                editor.putString("deviceId", deviceId)
-                editor.apply()
-            }
-        }
+// TODO
+//        (ctx?.getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE))?.let { sharedPref ->
+//            deviceId = sharedPref.getString("deviceId", null)
+//            if (deviceId == null) {
+//                deviceId = UUID.randomUUID().toString()
+//                val editor = sharedPref.edit()
+//                editor.putString("deviceId", deviceId)
+//                editor.apply()
+//            }
+//        }
     }
 
     inner class ActivityLifecycleAdapter : ActivityLifecycleCallbacks {

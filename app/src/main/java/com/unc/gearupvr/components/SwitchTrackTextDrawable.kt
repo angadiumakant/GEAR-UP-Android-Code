@@ -96,6 +96,7 @@ class SwitchTrackTextDrawable(@NonNull val context: Context, @StringRes val left
     override fun setAlpha(p0: Int) {
     }
 
+    @Deprecated("Deprecated in Java")
     override fun getOpacity(): Int {
         return PixelFormat.TRANSLUCENT
     }

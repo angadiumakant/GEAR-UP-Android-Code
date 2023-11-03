@@ -20,8 +20,6 @@ import com.unc.gearupvr.model.DashboardTile
 import com.unc.gearupvr.utils.UNWebViewClient
 import com.unc.gearupvr.utils.WebPageType
 import com.wang.avi.AVLoadingIndicatorView
-import kotlinx.android.synthetic.main.activity_web_view.*
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.alert
 
@@ -79,7 +77,7 @@ class DetailPageFragment : Fragment() {
                 binding.videoThumb.visibility = View.GONE
                 binding.playButton.visibility = View.GONE
                 setupWebView(binding.webView, WebPageType.ExternalPage, binding.indicatorView.avi)
-                binding.webView.loadUrl(tile.url)
+                binding.webView.loadUrl(tile.url?:"")
             }
             else -> {
                 val alert =
@@ -126,7 +124,7 @@ class DetailPageFragment : Fragment() {
                 val baseURL = "https://" + BuildConfig.API_BASE
                 binding.webView.loadDataWithBaseURL(
                     baseURL,
-                    it.lightModeContent,
+                    it.lightModeContent?:"",
                     "text/html; charset=utf-8",
                     "UTF-8",
                     ""
@@ -168,7 +166,7 @@ class DetailPageFragment : Fragment() {
                     it,
                     webPageType
                 )
-            }
+            }!!
     }
 
 }

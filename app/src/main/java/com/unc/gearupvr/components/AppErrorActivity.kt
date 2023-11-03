@@ -50,6 +50,7 @@ class AppErrorActivity : AppCompatActivity() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         triggerRebirth(applicationContext)

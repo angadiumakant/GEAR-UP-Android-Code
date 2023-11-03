@@ -144,6 +144,7 @@ class MediaLoader(private val context: Context) {
      */
     private inner class MediaLoaderTask(private val uiView: VideoUiView?) :
         AsyncTask<Intent?, Void?, Void?>() {
+        @Deprecated("Deprecated in Java")
         override fun doInBackground(vararg intent: Intent?): Void? {
             if (intent.isEmpty() || intent[0]?.data == null) { // This happens if the Activity wasn't started with the right intent.
                 errorText = "No URI specified. Using default panorama."
@@ -207,6 +208,7 @@ class MediaLoader(private val context: Context) {
             return null
         }
 
+        @Deprecated("Deprecated in Java")
         public override fun onPostExecute(unused: Void?) { // Set or clear the UI's mediaPlayer on the UI thread.
             uiView?.setMediaPlayer(mediaPlayer)
         }

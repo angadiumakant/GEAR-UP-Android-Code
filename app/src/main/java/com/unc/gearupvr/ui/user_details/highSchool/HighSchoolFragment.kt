@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProviders
 import com.unc.gearupvr.R
 import com.unc.gearupvr.databinding.HighSchoolFragmentBinding
 import com.unc.gearupvr.ui.user_details.UserDetailsViewModel
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class HighSchoolFragment : Fragment() {

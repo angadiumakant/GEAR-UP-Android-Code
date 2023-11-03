@@ -15,7 +15,6 @@ import com.unc.gearupvr.databinding.CollegesListViewFragmentBinding
 import com.unc.gearupvr.model.College
 import com.unc.gearupvr.ui.menu.MenuActivity
 import com.unc.gearupvr.ui.university_details.UniversityDetailsFragment
-import kotlinx.android.synthetic.main.indicator_view.view.*
 
 
 open class CollegesListViewFragment : Fragment() {
@@ -99,6 +98,8 @@ open class CollegesListViewFragment : Fragment() {
 
                             }
                         }
+
+                        else -> {}
                     }
                 }
             }
@@ -130,7 +131,7 @@ open class CollegesListViewFragment : Fragment() {
 
     fun showLoader() {
         binding.loader.avi.smoothToShow()
-        binding.loader.bringToFront()
+        binding.loader.avi.bringToFront()
     }
 
     override fun onResume() {

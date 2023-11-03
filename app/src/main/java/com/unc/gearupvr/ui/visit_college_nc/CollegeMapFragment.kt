@@ -20,7 +20,6 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.model.*
 import com.unc.gearupvr.R
 import com.unc.gearupvr.model.College
-import kotlinx.android.synthetic.main.indicator_view.view.*
 
 
 class CollegeMapFragment : CollegesListViewFragment(), GoogleMap.OnMyLocationButtonClickListener {

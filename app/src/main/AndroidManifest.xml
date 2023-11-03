@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.unc.gearupvr">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,14 +22,17 @@
         android:theme="@style/AppTheme"
         tools:node="replace">
         <activity
+            android:exported="true"
             android:name=".components.AppErrorActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_app_error"
             android:theme="@style/FullscreenTheme" />
         <activity
+            android:exported="true"
             android:name=".components.NetworkErrorActivity"
             android:theme="@style/Theme.Transparent" />
         <activity
+            android:exported="true"
             android:name=".components.video_player.VideoPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_video_player"
@@ -47,6 +49,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
+            android:exported="true"
             android:name=".ui.splash.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Transparent">
@@ -58,19 +61,23 @@
             </intent-filter>
         </activity>
         <activity
+            android:exported="true"
             android:name=".ui.user_details.UserDetailsActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Transparent" />
         <activity
+            android:exported="true"
             android:name=".ui.menu.MenuActivity"
             android:configChanges="orientation|screenSize|uiMode"
             android:label="@string/app_name" />
         <activity
+            android:exported="true"
             android:name=".ui.web_view.WebViewActivity"
             android:configChanges="orientation|screenSize|uiMode"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme" />
         <activity
+            android:exported="true"
             android:name=".ui.visit_college_nc.filter.FilterActivity"
             android:configChanges="orientation|screenSize|uiMode"
             android:label="@string/app_name"

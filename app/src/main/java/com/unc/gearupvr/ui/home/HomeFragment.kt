@@ -17,7 +17,6 @@ import com.unc.gearupvr.components.video_player.rendering.Utils
 import com.unc.gearupvr.databinding.HomeFragmentBinding
 import com.unc.gearupvr.ui.detail_page.DetailPageFragment
 import com.unc.gearupvr.ui.menu.MenuActivity
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.alert
 

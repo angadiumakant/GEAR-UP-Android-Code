@@ -17,7 +17,6 @@ import com.unc.gearupvr.R
 import com.unc.gearupvr.databinding.MajorListFragmentBinding
 import com.unc.gearupvr.model.Majors
 import com.unc.gearupvr.ui.visit_college_nc.filter.FilterFragmentViewModel
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.alert
 

@@ -98,7 +98,7 @@ class MonoscopicView
         // fusion. It's used instead of TYPE_ROTATION_VECTOR since the latter uses the magnetometer on
         // devices. When used indoors, the magnetometer can take some time to settle depending on the
         // device and amount of metal in the environment.
-        orientationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR)
+        orientationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR)!!
         phoneOrientationListener = PhoneOrientationListener()
 
         // When a phone rotates from portrait <-> landscape or portrait <-> reverse landscape, this flow

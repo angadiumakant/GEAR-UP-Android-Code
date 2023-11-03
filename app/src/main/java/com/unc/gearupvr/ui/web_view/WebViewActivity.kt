@@ -15,7 +15,6 @@ import com.unc.gearupvr.databinding.ActivityWebViewBinding
 import com.unc.gearupvr.utils.FilterConstants
 import com.unc.gearupvr.utils.UNWebViewClient
 import com.unc.gearupvr.utils.WebPageType
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 
@@ -41,7 +40,7 @@ class WebViewActivity : AppCompatActivity() {
                 this,
                 WebPageType.WebViewFragment
             )
-        webView.loadUrl(url)
+        webView.loadUrl(url?:"")
         binding.navTitle.text = webView.title
         webView.webChromeClient = object : WebChromeClient() {
             override fun onReceivedTitle(view: WebView, title: String) {

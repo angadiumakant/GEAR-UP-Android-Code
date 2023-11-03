@@ -19,7 +19,6 @@ import com.unc.gearupvr.ui.visit_college_nc.CollegesListViewFragment
 import com.unc.gearupvr.ui.visit_college_nc.VisitCollegeNCViewModel
 import com.unc.gearupvr.utils.ExternalLinks
 import com.unc.gearupvr.utils.KeyboardHandler
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 

@@ -15,7 +15,6 @@ import com.unc.gearupvr.databinding.CareersListFragmentBinding
 import com.unc.gearupvr.model.GearupApp
 import com.unc.gearupvr.ui.careers.details.CareersDetailsFragment
 import com.unc.gearupvr.ui.menu.MenuActivity
-import kotlinx.android.synthetic.main.indicator_view.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class CareersListFragment : Fragment() {
@@ -116,6 +115,8 @@ class CareersListFragment : Fragment() {
 
                             }
                         }
+
+                        else -> {}
                     }
                 }
             }
@@ -141,7 +142,7 @@ class CareersListFragment : Fragment() {
 
     private fun showLoader() {
         binding.loader.avi.smoothToShow()
-        binding.loader.bringToFront()
+        binding.loader.avi.bringToFront()
     }
 
     private fun refreshLoadMore() {

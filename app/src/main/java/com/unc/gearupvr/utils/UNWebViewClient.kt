@@ -115,6 +115,7 @@ class UNWebViewClient(
         WebPageType.WebViewFragment -> false
     }
 
+    @Deprecated("Deprecated in Java")
     override fun shouldOverrideUrlLoading(view: WebView?, request: String): Boolean {
         return shouldOverrideUrlLoading(request)
     }
@@ -129,6 +130,7 @@ class UNWebViewClient(
         loader?.hide()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onReceivedError(
         view: WebView?,
         errorCode: Int,

@@ -1,9 +1,5 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
-
 apply plugin: "kotlin-kapt"
 
 android {
@@ -34,23 +30,27 @@ android {
         }
 
     }
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 34
     compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
+        sourceCompatibility = 17
+        targetCompatibility = 17
     }
-    dataBinding {
-        enabled = true
+//    dataBinding {
+//        enabled = true
+//    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     defaultConfig {
         applicationId "com.unc.gearupvr"
-        minSdkVersion 22
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [googleMapApiKey: "AIzaSyC1khp-LcosAjXiML2kKF4-ogBxOqUFP2w"]
     }
@@ -117,23 +117,24 @@ android {
         debug {
             applicationIdSuffix ".debug"
             debuggable true
-            signingConfig null
+            signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.unc.gearupvr'
 
-    applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            def project = "gear_up_vr"
-            def SEP = "_"
-            def buildType = variant.variantData.variantConfiguration.buildType.name
-            def version = variant.versionName
-            def buildNumber = variant.versionCode
-
-            def newApkName = project + SEP + version + SEP + "build" + SEP + buildNumber + SEP + buildType + ".apk"
-
-            outputFileName = new File(newApkName)
-        }
-    }
+//    applicationVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            def project = "gear_up_vr"
+//            def SEP = "_"
+//            def buildType = variant.variantData.variantConfiguration.buildType.name
+//            def version = variant.versionName
+//            def buildNumber = variant.versionCode
+//
+//            def newApkName = project + SEP + version + SEP + "build" + SEP + buildNumber + SEP + buildType + ".apk"
+//
+//            outputFileName = new File(newApkName)
+//        }
+//    }
 }
 
 kapt {
